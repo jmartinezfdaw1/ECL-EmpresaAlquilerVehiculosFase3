@@ -1,0 +1,52 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {	
+	-fx-font-size: 14px;	
+}
+.button {
+	-fx-background-color: rgb(222,193,180);
+	-fx-border-color:  rgb(128,128,128);
+    -fx-border-radius:  3px;
+    -fx-font-family: "Pt Sans";
+    -fx-font-size: 14px;
+    -fx-text-fill:  #1F2833;
+}
+.text-area {
+	-fx-border-color:   #1F2833 ;
+	-fx-font-family: monospace;
+	-fx-font-weight: bold;
+}
+
+.menu-bar {
+	-fx-background-color: rgb(222,193,180);
+	
+}
+.menu > .label {
+	-fx-text-fill: #1F2833 ;
+	-fx-border-width: 0 ;
+}
+
+.menu-item .label{
+    -fx-text-fill:  #1F2833 ;
+    -fx-border-width: 0 ;
+}
+
+.vbox {
+	-fx-background-color: #1F2833 ;
+}
+
+.radio-button   {
+	-fx-text-fill: rgb(222,193,180);
+	-fx-font-size: 12px;
+}
+
+.label  {
+	-fx-text-fill: rgb(222,193,180);	
+	-fx-border-color:  rgb(128,128,128);
+	-fx-border-width: 3 ;
+}
+
+.hbox > .label {	
+	-fx-border-width: 0 ;
+	-fx-font-weight: bold;
+}
+
