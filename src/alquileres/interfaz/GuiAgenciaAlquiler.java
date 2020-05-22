@@ -113,6 +113,7 @@ public class GuiAgenciaAlquiler extends Application
 		rbtCoches = new RadioButton("Coches ASC matricula");
 		rbtCoches.setMaxSize(Integer.MAX_VALUE,Integer.MAX_VALUE);
 		rbtCoches.setToggleGroup(grupo);
+		rbtCoches.setSelected(true);
 		rbtFurgonetas = new RadioButton("Furgonetas DESC matricula");
 		rbtFurgonetas.setMaxSize(Integer.MAX_VALUE,Integer.MAX_VALUE);
 		rbtFurgonetas.setToggleGroup(grupo);
@@ -158,15 +159,20 @@ public class GuiAgenciaAlquiler extends Application
 		String texto = agencia.toString();
 		String dias = txtDias.getText();
 		if(texto.isEmpty()) {
-			area.setText("Introduzca número");
+			area.setText("Lea fichero antes de mostrar");
 		}
 		else {
-			try{
-				numero = Integer.parseInt(dias);
-				area.setText(agencia.buscarCoches(numero));
+			if(dias.isEmpty()) {
+				area.setText("Introduzca número");
 			}
-			catch(NumberFormatException e) {
-				area.setText("Introduzca número correcto");
+			else {
+				try{
+					numero = Integer.parseInt(dias);
+					area.setText(agencia.buscarCoches(numero));
+				}
+				catch(NumberFormatException e) {
+					area.setText("Introduzca número correcto");
+				}
 			}
 		}
 	}
